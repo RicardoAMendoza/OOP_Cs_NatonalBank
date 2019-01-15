@@ -14,44 +14,56 @@ In this project we will introduce concepts of Object Oriented Programming and th
 ### This project focuses in the Object Oriented Programming.
 
 
-### [Problem](https://visualstudio.microsoft.com/)
+### [Problem](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/documents/420-DWA-TT_Labo_2.pdf)
 
 A bank has several agencies spread over the Quebec territory. A bank is characterized by the name of its director, 
 its global capital, its own name and the address of its head office.
 
 
-### Summary of classes:
+### Summary of classes :
 
 We have these classes and their propierties.
 
 ![Summary of classes](/img/organization.jpg "Summary of classes")
 
-We must complete the following class diagram using the required symbols to specify 
+
+
+After the analysis we get the following relationship between classes. We must complete the diagram using the required symbols to specify 
  *abstraction, encapsulation, inheritance, and polymorphism.*
 
  
-### Summary of classes:
+### Inheritance :
+
 
 ![Class Diagram](/img/classes.jpg "Class Diagram")
 
-We did the analysis and we get the next diagrams.
+
+We did the analysis and we get the next classes diagrams.
 
 
-### abstract class clsAccount:
+
+### abstract class clsAccount :
 
 ![Class Diagram Account](/img/account.jpg "abstract class clsAccount")
 
 
-### abstract class clsHuman:
+
+### abstract class clsHuman :
 
 ![Class Diagram Human](/img/human.jpg "abstract class clsHuman")
 
 
-### Class Diagram Developed:
+
+### Final class class diagram developed :
+
+We implemented with C# and Visual Studio the abstract classes account (clsAccount) and human (clsHuman) and all their offspring.
+
 
 ![Class Diagram Developed](/img/Class_Diagram_StrategyPattern.jpg "Class Diagram Developed")
 
-We implemented with C# and Visual Studio the abstract classes account (clsAccount) and human (clsHuman) and all their offspring.
+
+We write in C# a program to test our class diagram and to handle the whole bank, employees, clients and accounts info. 
+
 
 
 ### Concepts.
@@ -81,7 +93,7 @@ When we can reuse (inherits), the behavior of a super class (parent class) in a 
 
 [Inheritance in C# and .NET](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/inheritance)
 
-Not all membersfrom the parent class are nherited in the the child class.
+Not all membersfrom the parent class are inherited in the the child class.
 
  * Static constructors, *which initialize the static data of a class*.
  * Instance constructors, *which you call to create a new instance of the class. Each class must define its own constructors*.
