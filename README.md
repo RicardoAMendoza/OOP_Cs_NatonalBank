@@ -238,7 +238,7 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
 
 Identify families of algorithms as a group technology, gather them and make them interchangeable.
 
-[C# The Strategy Pattern](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
+[Video : C# The Strategy Pattern](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
 
 ![Strategy design pattern](/img/sdp.jpg "Strategy design pattern")
 		
@@ -269,7 +269,7 @@ Identify families of algorithms as a group technology, gather them and make them
  
  ## Built With
 
-* [Visual Studio](https://visualstudio.microsoft.com/)
+* [Microsoft Visual Studio Community 2015 Version 14.0.25425.01 Update 3](https://visualstudio.microsoft.com/)
 
 
 ## Versions and source manager. 
