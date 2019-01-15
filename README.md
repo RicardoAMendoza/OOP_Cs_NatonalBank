@@ -112,33 +112,42 @@ All members from the super class are inherited to the lower classes, but if they
 A child classes can *override* inherited members by providing an implementation in the parent class. 
 The member in the parent class have to be marked with the *virtual* keyword.
 
-        Example: from the parent class : public abstract class clsAccount
- 
-        public virtual bool fncDeposit(double deposit)
-        {
-            if (deposit < 20 || 500 < deposit)
-            {
-                return false;
-            }
-            else
-            {
-                vBalance += deposit;
-                return true;
-            }
-        }
+        Example: from the parent class : 
 		
-		in the child class : public class clsPaidAccount : clsAccount
+		public abstract class clsAccount
+		{
+			public virtual bool fncDeposit(double deposit)
+			{
+				if (deposit < 20 || 500 < deposit)
+				{
+					return false;
+				}
+				else
+				{
+					vBalance += deposit;
+					return true;
+				}
+			}
+		}
 		
-		public override bool fncDeposit(double deposit)
-        {
-            vInterestPayment = fncPayInterest(deposit);
-            fncPaidAccountPayInterest(vInterestPayment);
-            MessageBox.Show("an interest of : " + " " + vInterestPayment.ToString() + " $ " + " has been paid ");
-            return base.fncDeposit(deposit);
-        }
+		
+		in the child class : 
+		
+		public class clsPaidAccount : clsAccount
+		{
+			public override bool fncDeposit(double deposit)
+			{
+				vInterestPayment = fncPayInterest(deposit);
+				fncPaidAccountPayInterest(vInterestPayment);
+				MessageBox.Show("an interest of : " + " " + vInterestPayment.ToString() + " $ " + " has been paid ");
+				return base.fncDeposit(deposit);
+			}
+		}
+		
 		
 		
 #### Abstract is -		
+
 In a class declaration indicates that this class is going to be a super class, a base class of others classes.
 Members with the key word abstract, or included in an abstract class, must be implemented in the lower classes.
 Abstract can be used with classes, methods, properties, indexers, and events.
@@ -146,15 +155,20 @@ Abstract can be used with classes, methods, properties, indexers, and events.
 [Key word abstract](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)
 
 
-#### MVC : Model View Controller.
+#### [MVC : Model View Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
-[Model View Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+
+![MVC](/img/MVCmodel.JPG "MVC")
+
+
 
  * Model:      *It should be responsible for the data of the application domain.*
  * View:       *It presents the display of the model in the user interface.*
  * Controller: *It is really the heart of the MVC, the intermediary that ties the Model and the View together.*
                *The controller takes user input, manipulates the model & causes the view to update*
 
+			   
+			   
 When we have this pattern in one application (MVC pattern), we can reuse code in other application
 and work in parallel whit others developers.			   
 			   
@@ -165,12 +179,14 @@ In the projec we can watch the MVC in the folder projet as follows.
 ![Model-View-Controller](/img/mvc.jpg "Model-View-Controller")
 
 
+
 But the heart of the MVC, the controllers are clsDataSource and clsDataSave. The clsDataSource takes the data
 from the TXT files, delivers the data as the inputs to the application and the result goes to clsDataSave
 and this class save the outputs in XML files.
 
 
 ![Controller](/img/controller.jpg "Controller is the heart of the MVC")
+
 
 
 #### Events and delegates
@@ -183,10 +199,12 @@ A delegate is a class that can hold a reference to a method.
 Unlike other classes, a delegate class has a signature, and it can hold references only to methods that match its signature.
   
  * Delegates. *Agreement / Contract between Publisher and Subscriber, Determines the signature of the event handler method in Subscriber.*
+ 
   
-[C# Events and Delegates](https://www.youtube.com/watch?v=jQgwEsJISy0)  
+[Video : C# Events and Delegates](https://www.youtube.com/watch?v=jQgwEsJISy0)  
 
         
+		
 		DECLARE AN EVENT
         1. define delegate
            public delegate void AdminDelegate(object source, clsAdminEventAgrs e);
@@ -205,6 +223,7 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
                 ApplicationClosed(this, new clsAdminEventAgrs("An event started : you just have 5 minuts in admin control !!"));
             }
         }
+		
         public void OnApplicationWarned()
         {
             if (ApplicationWarned != null)
@@ -213,6 +232,7 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
             }
         }
 
+		
 
 #### Strategy design pattern
 
@@ -223,6 +243,7 @@ Identify families of algorithms as a group technology, gather them and make them
 ![Strategy design pattern](/img/sdp.jpg "Strategy design pattern")
 		
 
+		
 ### Prerequisites
 
  * Microsoft Visual Studio Community 2015 Version 14.0.25425.01 Update 3
