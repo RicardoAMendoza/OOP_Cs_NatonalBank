@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Employees>
+  <Employee idCounter="2" number="E1E1" lastName="Zamanego" photo="zamanego.png" year="2017" month="8" day="15">
+    <name>Juan</name>
+  </Employee>
+  <Employee idCounter="3" number="E3E3" lastName="Silva" photo="silva.png" year="2014" month="9" day="19">
+    <name>Cesar</name>
+  </Employee>
+  <Employee idCounter="4" number="E4E4" lastName="Fernandez" photo="fernandez.png" year="2013" month="11" day="15">
+    <name>Ana</name>
+  </Employee>
+</Employees>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Agencies>
+  <Agency idCounter="1" number="A1A1" adress="2727 Rosemont">
+    <name>Rosemont NB</name>
+  </Agency>
+  <Agency idCounter="2" number="A2A2" adress="3131 MontRoyal">
+    <name>MontRoyal NB</name>
+  </Agency>
+  <Agency idCounter="3" number="A3A3" adress="247 Beaubien">
+    <name>Beaubien NB</name>
+  </Agency>
+  <Agency idCounter="4" number="A4A4" adress="456 Alexander">
+    <name>Alexander NB</name>
+  </Agency>
+</Agencies>

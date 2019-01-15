@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Admins>
+  <Admin>
+    <number>admin01</number>
+    <name>Andy	</name>
+    <lastName>Garcia</lastName>
+    <e-mail>garcia@teccart.qc.ca</e-mail>
+    <password>sql</password>
+    <photoString>andy.png	</photoString>
+  </Admin>
+  <Admin>
+    <number>admin02</number>
+    <name>Ricardo	</name>
+    <lastName>Mendoza</lastName>
+    <e-mail>omnimtv@gmail.com</e-mail>
+    <password>omni</password>
+    <photoString>ricardo.png</photoString>
+  </Admin>
+  <Admin>
+    <number>admin03</number>
+    <name>Ricker	</name>
+    <lastName>Alcindor</lastName>
+    <e-mail>rickers@teccart.qc.ca</e-mail>
+    <password>database</password>
+    <photoString>rickers.png	</photoString>
+  </Admin>
+</Admins>

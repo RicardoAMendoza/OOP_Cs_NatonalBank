@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Clients>
+  <Client idCounter="2" number="C1C1" lastName="Gates" nip="windows" address="3540 Masson" adviserNumber="E1E1" adviserName="Juan" adviserLastName="Zamanego" hiringYear="2017" hiringMonth="8" hiringDay="15" photoAdviser="zamanego.png">
+    <name>Bill</name>
+  </Client>
+  <Client idCounter="3" number="C2C2" lastName="Jobs" nip="apple" address="148 Cousineau" adviserNumber="E3E3" adviserName="Cesar" adviserLastName="Silva" hiringYear="2014" hiringMonth="9" hiringDay="19" photoAdviser="silva.png">
+    <name>Steve</name>
+  </Client>
+  <Client idCounter="4" number="C3C3" lastName="Winfreh" nip="own" address="3030 Hochelaga" adviserNumber="E4E4" adviserName="Ana" adviserLastName="Fernandez" hiringYear="2013" hiringMonth="11" hiringDay="15" photoAdviser="fernandez.png">
+    <name>Oprah</name>
+  </Client>
+</Clients>

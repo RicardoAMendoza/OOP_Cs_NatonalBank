@@ -1,0 +1,15 @@
+D1D1
+Patrick	
+Dorre
+100000
+dorre.png
+D2D2
+Fernand	
+Bikatal-Bi-Tonye
+50000
+fernand.png
+D3D3
+Richard	
+Saint-Vingt-Cent
+60000
+richard.png

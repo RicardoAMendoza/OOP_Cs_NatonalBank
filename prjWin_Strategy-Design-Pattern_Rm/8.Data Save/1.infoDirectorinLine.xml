@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Directors>
+  <Director number="D1D1" lastName="Dorre" salary="100000" photoString="dorre.png">
+    <name>Patrick	</name>
+  </Director>
+  <Director number="D2D2" lastName="Bikatal-Bi-Tonye" salary="50000" photoString="fernand.png">
+    <name>Fernand	</name>
+  </Director>
+  <Director number="D3D3" lastName="Saint-Vingt-Cent" salary="60000" photoString="richard.png">
+    <name>Richard	</name>
+  </Director>
+</Directors>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PaidAccounts>
+  <PaidAccount>
+    <interestRate>0.15</interestRate>
+    <number>PA1PA1</number>
+    <type>PaidAccount</type>
+    <balance>2999</balance>
+    <openDay>8</openDay>
+    <openMonth>2</openMonth>
+    <openYear>2016</openYear>
+  </PaidAccount>
+</PaidAccounts>

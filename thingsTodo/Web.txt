@@ -1,0 +1,21 @@
+In this project we will introduce concepts of Object Oriented Programming and the relationship between classes.
+
+C# Events and Delegates Made Simple
+https://www.youtube.com/watch?v=jQgwEsJISy0
+
+The Strategy Pattern
+https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s
+
+How to write a PDF
+https://www.youtube.com/watch?v=e1uMdAG8L3Y&t=40s
+https://sourceforge.net/projects/itextsharp/
+
+concepts
+TD2 : Diagramme de classes UML
+https://lipn.univ-paris13.fr/~gerard/docs/corrections/uml-corr02.pdf
+
+OOP interview questions :- What is the difference between Abstraction and Encapsulation ?
+https://www.youtube.com/watch?v=1Q4I63-hKcY
+https://stackoverflow.com/questions/16938667/how-abstraction-and-encapsulation-differ
+
+

@@ -1,0 +1,18 @@
+-- This project uses the following licenses:
+-- MIT License
+-- Copyright (c) 2018 Ricardo Mendoza 
+-- Montréal Québec Canada
+
+Description - In this project we will introduce concepts of Object Oriented Programming and the relationship between classes in C # .NET.
+https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank.git
+
+-- TITLE
+1. create repository in GitHub : OOP_Cs_NatonalBank
+2. create file : prjWin_NationalBank_Rm
+3. open git Bash
+4. create README.md inside prjWin_NationalBank_Rm
+   git init
+5. git add README.md
+6. git commit -m "first commit"
+7. git remote add origin https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank.git
+8. git push -u origin master

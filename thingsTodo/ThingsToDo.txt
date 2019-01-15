@@ -1,0 +1,19 @@
+
+Strategy-Design-Pattern
+
+Identify families of algorithms as a group technology, gather them and make them interchangeable.
+
+…or create a new repository on the command line
+echo "# Strategy-Design-Pattern" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/RicardoAMendoza/Strategy-Design-Pattern.git
+git push -u origin master
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/RicardoAMendoza/Strategy-Design-Pattern.git
+git push -u origin master
+
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.

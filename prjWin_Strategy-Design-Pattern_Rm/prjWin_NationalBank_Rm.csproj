@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FDB0420-6003-48F2-98B9-E070AAE377D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>prjWin_Strategy_Design_Pattern_Rm</RootNamespace>
+    <AssemblyName>prjWin_Strategy-Design-Pattern_Rm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\01. Cs\prj12Win_Rm_StrategyPattern_BankNational\prj12Win_Rm_StrategyPattern_BankNational\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\..\..\01. Cs\prj12Win_Rm_StrategyPattern_BankNational\prj12Win_Rm_StrategyPattern_BankNational\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\..\..\01. Cs\prj12Win_Rm_StrategyPattern_BankNational\prj12Win_Rm_StrategyPattern_BankNational\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1.Model\clsAdmin.cs" />
+    <Compile Include="1.Model\clsAgency.cs" />
+    <Compile Include="1.Model\clsClient.cs" />
+    <Compile Include="1.Model\clsDate.cs" />
+    <Compile Include="1.Model\clsDirecteur.cs" />
+    <Compile Include="1.Model\clsEmployee.cs" />
+    <Compile Include="1.Model\clsNationalBank.cs" />
+    <Compile Include="1.Model\clsPaidAccount.cs" />
+    <Compile Include="1.Model\clsUnpaidAccount.cs" />
+    <Compile Include="3.Control\clsDataSave.cs" />
+    <Compile Include="3.Control\clsDataSource.cs" />
+    <Compile Include="4.Collections\clsListAdmins.cs" />
+    <Compile Include="4.Collections\clsListAgencies.cs" />
+    <Compile Include="4.Collections\clsListClients.cs" />
+    <Compile Include="4.Collections\clsListDirecteurs.cs" />
+    <Compile Include="4.Collections\clsListEmployees.cs" />
+    <Compile Include="5.Abstract_Class\clsAccount.cs" />
+    <Compile Include="5.Abstract_Class\clsHuman.cs" />
+    <Compile Include="2.View\frmBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2.View\frmBank.Designer.cs">
+      <DependentUpon>frmBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="4.Collections\clsListPaidAccounts.cs" />
+    <Compile Include="4.Collections\clsListUnpaidAccounts.cs" />
+    <Compile Include="6.Event_Delegates\clsAdminEventAgrs.cs" />
+    <Compile Include="9.StrategyDesignPattern_PDF\Context\clsReceiptConsultPdf.cs" />
+    <Compile Include="9.StrategyDesignPattern_PDF\Context\clsReceiptDepositPdf.cs" />
+    <Compile Include="9.StrategyDesignPattern_PDF\Context\clsReceiptWithdrawPdf.cs" />
+    <Compile Include="9.StrategyDesignPattern_PDF\Context\clsWriteDocumentPdf.cs" />
+    <Compile Include="9.StrategyDesignPattern_PDF\Implements-concretStrategy\clsWriteConsultPdf.cs" />
+    <Compile Include="9.StrategyDesignPattern_PDF\Implements-concretStrategy\clsWriteDepositPdf.cs" />
+    <Compile Include="9.StrategyDesignPattern_PDF\Implements-concretStrategy\clsWriteWithdrawPdf.cs" />
+    <Compile Include="9.StrategyDesignPattern_PDF\Strategy\IntWritePdf.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="2.View\frmBank.resx">
+      <DependentUpon>frmBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Documents\420-DWA-TT_Labo_2.pdf" />
+    <None Include="Model_Object\Class_Diagram_StrategyPattern.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="8.Data Save\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="7.Data Source\1.infoBank.txt" />
+    <Content Include="7.Data Source\2.infoDirector.txt" />
+    <Content Include="7.Data Source\3.infoAgency.txt" />
+    <Content Include="7.Data Source\4.infoAdmin.txt" />
+    <Content Include="7.Data Source\5.infoEmployee.txt" />
+    <Content Include="7.Data Source\6.infoClient - Copy.txt" />
+    <Content Include="7.Data Source\6.infoClient.txt" />
+    <Content Include="7.Data Source\7.infoPaidAccount.txt" />
+    <Content Include="7.Data Source\8.infoUnPaidAccount.txt" />
+    <Content Include="Admins\andy.png" />
+    <Content Include="Admins\ricardo.png" />
+    <Content Include="Admins\rickers.png" />
+    <Content Include="Admins\robotica.png" />
+    <Content Include="Directors\ct.png" />
+    <Content Include="Directors\dorre.png" />
+    <Content Include="Directors\fernand.png" />
+    <Content Include="Directors\richard.png" />
+    <Content Include="Directors\robotica.png" />
+    <Content Include="Employees\arteaga.png" />
+    <Content Include="Employees\brand.png" />
+    <Content Include="Employees\eitien.png" />
+    <Content Include="Employees\fernandez.png" />
+    <Content Include="Employees\francoise.png" />
+    <Content Include="Employees\gonzalez.png" />
+    <Content Include="Employees\houda.png" />
+    <Content Include="Employees\julien.png" />
+    <Content Include="Employees\kamil.png" />
+    <Content Include="Employees\laurent.png" />
+    <Content Include="Employees\madany.png" />
+    <Content Include="Employees\mafogue.png" />
+    <Content Include="Employees\nguiya.png" />
+    <Content Include="Employees\obama.png" />
+    <Content Include="Employees\popois.png" />
+    <Content Include="Employees\robotica.png" />
+    <Content Include="Employees\serge.png" />
+    <Content Include="Employees\silva.png" />
+    <Content Include="Employees\trudeau.png" />
+    <Content Include="Employees\zamanego.png" />
+    <Content Include="InitializeComponent\robotica.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

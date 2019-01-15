@@ -1,0 +1,14 @@
+D:\01. Cs\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\bin\Debug\prjWin_Strategy-Design-Pattern_Rm.exe.config
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\bin\Debug\prjWin_Strategy-Design-Pattern_Rm.exe.config
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\obj\Debug\prjWin_Strategy-Design-Pattern_Rm.csprojResolveAssemblyReference.cache
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\obj\Debug\prjWin_Strategy_Design_Pattern_Rm.Properties.Resources.resources
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\obj\Debug\prjWin_Strategy-Design-Pattern_Rm.csproj.GenerateResource.Cache
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\obj\Debug\prjWin_Strategy_Design_Pattern_Rm.frmBank.resources
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\bin\Debug\prjWin_Strategy-Design-Pattern_Rm.exe
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\bin\Debug\prjWin_Strategy-Design-Pattern_Rm.pdb
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\obj\Debug\prjWin_Strategy-Design-Pattern_Rm.exe
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\obj\Debug\prjWin_Strategy-Design-Pattern_Rm.pdb
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\bin\Debug\itextsharp.dll
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\bin\Debug\itextsharp.pdfa.dll
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\bin\Debug\itextsharp.xtra.dll
+D:\10.Portafolio\prjWin_Strategy-Design-Pattern_Rm\prjWin_Strategy-Design-Pattern_Rm\bin\Debug\itextsharp.xml
