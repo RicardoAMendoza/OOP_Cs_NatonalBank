@@ -54,7 +54,7 @@ We did the analysis and we get the next classes diagrams.
 
 
 
-### Final class class diagram developed :
+### Final class diagram developed :
 
 We implemented with C# and Visual Studio the abstract classes account (clsAccount) and human (clsHuman) and all their offspring.
 
@@ -106,6 +106,7 @@ All members from the super class are inherited to the lower classes, but if they
  * Protected, *members are visible only in derived classes.*
  * Internal *members are visible only in derived classes that are located in the same assembly as the base class.*
  * Public, *members are visible in derived classes and are part of the derived class.*
+ 
  
  
 A child classes can *override* inherited members by providing an implementation in the parent class. 
