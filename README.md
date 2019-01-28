@@ -146,17 +146,36 @@ The member in the parent class have to be marked with the *virtual* keyword.
 		}
 		
 		
-		
+	
+	
 #### Abstract is -		
 
 In a class declaration indicates that this class is going to be a super class, a base class of others classes.
 Members with the key word abstract, or included in an abstract class, must be implemented in the lower classes.
 Abstract can be used with classes, methods, properties, indexers, and events.
 
+##### N.B : A class can inherit only once.
+
+
 [Key word abstract](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/abstract)
 
 
-#### [MVC : Model View Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
+
+### Strategy design pattern
+
+We identify families of algorithms as a group technology, we gather them and we can make them interchangeable.
+We do the strategy with Interfaces, the heritage is made with an interface.
+
+##### N.B : A interface can inherit more than once.
+
+
+[Video : C# The Strategy Pattern](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
+
+![Strategy design pattern](/img/sdp.jpg "Strategy design pattern")
+
+
+
+### [MVC : Model View Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
 
 ![MVC](/img/MVCmodel.JPG "MVC")
@@ -189,7 +208,7 @@ and this class save the outputs in XML files.
 
 [OOP_Cs_NatonalBank/prjWin_Strategy-Design-Pattern_Rm/3.Control/clsDataSource.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/3.Control/clsDataSource.cs)
 
-1.- Data save into XML documents (document.txt)
+2.- Data save into XML documents (document.txt)
 
 [OOP_Cs_NatonalBank/prjWin_Strategy-Design-Pattern_Rm/3.Control/clsDataSave.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/3.Control/clsDataSave.cs)
 
@@ -198,7 +217,7 @@ and this class save the outputs in XML files.
 
 
 
-#### Events and delegates
+### Events and delegates
 
 An event is a message sent by an object to signal the occurrence of an action.
 
@@ -242,17 +261,7 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
         }
 
 		
-
-#### Strategy design pattern
-
-Identify families of algorithms as a group technology, gather them and make them interchangeable.
-
-[Video : C# The Strategy Pattern](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
-
-![Strategy design pattern](/img/sdp.jpg "Strategy design pattern")
-		
-
-		
+	
 ### Prerequisites
 
  * Microsoft Visual Studio Community 2015 Version 14.0.25425.01 Update 3
