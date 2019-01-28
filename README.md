@@ -101,12 +101,15 @@ Not all membersfrom the parent class are inherited in the the child class.
  * Finalizers, *which are called by the runtime's garbage collector to destroy instances of a class*.
  
  
-All members from the super class are inherited to the lower classes, but if they are visible or not depends on their accessibility.*
+All members from the super class are inherited to the lower classes, but if they are visible or not depends on their accessibility.
 
- * Private, *members are visible only in derived classes that are nested in their base class.*
- * Protected, *members are visible only in derived classes.*
- * Internal *members are visible only in derived classes that are located in the same assembly as the base class.*
- * Public, *members are visible in derived classes and are part of the derived class.*
+
+#### [Accessibility levels for members](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/accessibility-levels)
+
+ * Private.-   *Members are visible only within the body of the class in which they are declared.*
+ * Protected.- *Members are visible in the containing class or in derived classes.*
+ * Internal.-  *Members are visible only in derived classes that are located in the same assembly as the base class.*
+ * Public.-    *Members are visible with out restrictions.*
  
  
  
