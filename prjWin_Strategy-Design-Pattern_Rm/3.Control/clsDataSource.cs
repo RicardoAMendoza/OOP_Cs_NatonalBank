@@ -9,24 +9,28 @@ using System.Xml;
 
 namespace prjWin_NationalBank_Rm
 {
-    /// <summary>
-    /// Ricardo Mendoza
-    /// Strategy Design Patern
-    /// Institut Teccart
-    /// www.teccart.qc.ca
-    /// Montréal, Québec
-    /// Août 2017
-    /// </summary>
+    /*
+    * This project uses the following licenses:
+    *  MIT License
+    *  Copyright (c) 2017 Ricardo Mendoza 
+    *  Montréal Québec Canada
+    *  Institut Teccart
+    *  www.teccart.qc.ca
+    *  Août 2017
+   */
     public static class clsDataSource
     {
-        //public static clsListPaidAccounts listPaidAccounts = new clsListPaidAccounts();
-
+        // Attributes
+        // public static clsListPaidAccounts listPaidAccounts = new clsListPaidAccounts();
         public static clsListDirecteurs listDirectors = new clsListDirecteurs();
         public static clsListAdmins listAdmins = new clsListAdmins();
         public static clsListAgencies listAgencies = new clsListAgencies();
         public static clsListEmployees listEmployees = new clsListEmployees();
 
-        // Bank
+        /// <summary>
+        /// Get directors information from txt document
+        /// </summary>
+        /// <returns>listDirectors</returns>
         public static clsListDirecteurs fnGetDirecteurs()
         {
             string number, name, lastName;
@@ -44,11 +48,15 @@ namespace prjWin_NationalBank_Rm
 
                 listDirectors.fncAdd(new clsDirecteur(number, name, lastName, salary, photo));
             }
-            //MessageBox.Show("Directors : " + tmp.Quantity.ToString());
-            //MessageBox.Show("Photo string : " + tmp.Elements);
+            // MessageBox.Show("Directors : " + tmp.Quantity.ToString());
+            // MessageBox.Show("Photo string : " + tmp.Elements);
             myTxt.Close();
             return listDirectors;
         }
+        /// <summary>
+        /// Get agencies information from txt document
+        /// </summary>
+        /// <returns>listAgencies</returns>
         public static clsListAgencies fncGetAgencies()
         {
             string agencyNumber, agencyName, agencyAddress;
@@ -64,7 +72,10 @@ namespace prjWin_NationalBank_Rm
             //MessageBox.Show("Agencies : " + tmp.Quantity.ToString());
             return listAgencies;
         }
-        // Admin
+        /// <summary>
+        /// Get admins information from txt document
+        /// </summary>
+        /// <returns>listAdmins</returns>
         public static clsListAdmins fncGetAdmins()
         {
             string adminNumber, adminName, adminLastName, adminEmail, adminPassword, adminPhoto;
@@ -86,7 +97,10 @@ namespace prjWin_NationalBank_Rm
             //MessageBox.Show("Admins : " + tmp.Quantity.ToString());
             return listAdmins;
         }
-        // Agency
+        /// <summary>
+        /// Get employees information from txt document
+        /// </summary>
+        /// <returns>listEmployees</returns>
         public static clsListEmployees fncGetEmployees(string agencyNumber)
         {
             string agencyNbr, number, name, lastName;
@@ -112,8 +126,10 @@ namespace prjWin_NationalBank_Rm
             //MessageBox.Show("Employees : " + tmp.Quantity.ToString());
             return listEmployees;
         }
-
-
+        /// <summary>
+        /// Get clients information from txt document
+        /// </summary>
+        /// <returns>listClients</returns>
         public static clsListClients fncGetClients(string agencyNumber)
         {
             // variables without employee
@@ -122,7 +138,7 @@ namespace prjWin_NationalBank_Rm
             string numberEmp, nameEmp, lastNameEmp, photo;
             int day, month, year;
             StreamReader myTxt = new StreamReader("6.infoClient.txt");
-            clsListClients tmp = new clsListClients();
+            clsListClients listClients = new clsListClients();
             while (!myTxt.EndOfStream)
             {
                 // values from txt employee -> 6.infoClient - Copy.txt
@@ -142,14 +158,17 @@ namespace prjWin_NationalBank_Rm
                 year = Convert.ToInt32(myTxt.ReadLine());
                 if (agNbr == agencyNumber)
                 {
-                    tmp.fncAdd(new clsClient(number, name, lastName, nip, address, numberEmp, nameEmp, lastNameEmp, photo, day, month, year));
+                    listClients.fncAdd(new clsClient(number, name, lastName, nip, address, numberEmp, nameEmp, lastNameEmp, photo, day, month, year));
                 }
             }
             //MessageBox.Show("Clients : " + tmp.Quantity.ToString());
             myTxt.Close();
-            return tmp;
+            return listClients;
         }
-        // Client
+        /// <summary>
+        /// Get paid accounts information from txt document
+        /// </summary>
+        /// <returns>listPaidAccounts</returns>
         public static clsListPaidAccounts fncGetPaidAccounts(string clientNumber)
         {
             string clNbr;
@@ -158,7 +177,7 @@ namespace prjWin_NationalBank_Rm
             double balance;
             int day, month, year;
             StreamReader myTxt = new StreamReader("7.infoPaidAccount.txt");
-            clsListPaidAccounts tmp = new clsListPaidAccounts();
+            clsListPaidAccounts listPaidAccounts = new clsListPaidAccounts();
             while (!myTxt.EndOfStream)
             {
                 clNbr = myTxt.ReadLine();
@@ -176,14 +195,17 @@ namespace prjWin_NationalBank_Rm
                     /// <summary>
                     /// Constructor that takes seven arguments -> in the Function protected abstract : Pay interest.
                     /// </summary>
-                    tmp.fncAdd(new clsPaidAccount(interestRate, number, type, balance, day, month, year));
+                    listPaidAccounts.fncAdd(new clsPaidAccount(interestRate, number, type, balance, day, month, year));
                 }
             }
             myTxt.Close();
             //MessageBox.Show("PaidAccounts : " + tmp.Quantity.ToString());
-            return tmp;
+            return listPaidAccounts;
         }
-
+        /// <summary>
+        /// Get un paid accounts information from txt document
+        /// </summary>
+        /// <returns>listUnPaidAccounts</returns>
         public static clsListUnpaidAccounts fncGetUnpaidAccounts(string clientNumber)
         {
             string clNbr;
@@ -193,7 +215,7 @@ namespace prjWin_NationalBank_Rm
             double balance;
             int day, month, year;
             StreamReader myTxt = new StreamReader("8.infoUnPaidAccount.txt");
-            clsListUnpaidAccounts tmp = new clsListUnpaidAccounts();
+            clsListUnpaidAccounts listUnPaidAccounts = new clsListUnpaidAccounts();
             while (!myTxt.EndOfStream)
             {
                 clNbr = myTxt.ReadLine();
@@ -211,12 +233,12 @@ namespace prjWin_NationalBank_Rm
                     /// <summary>
                     /// Constructor that takes eigth arguments -> in the Function protected abstract : Charge  commission.
                     /// </summary>
-                    tmp.fncAdd(new clsUnpaidAccount(commission, overdraft, number, type, balance, day, month, year));
+                    listUnPaidAccounts.fncAdd(new clsUnpaidAccount(commission, overdraft, number, type, balance, day, month, year));
                 }
             }
             myTxt.Close();
             // MessageBox.Show("UnPaidAccounts : " + tmp.Quantity.ToString());
-            return tmp;
+            return listUnPaidAccounts;
         }
         public static string fncEmptyConstructor()
         {

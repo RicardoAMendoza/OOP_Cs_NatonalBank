@@ -117,7 +117,6 @@ namespace prjWin_NationalBank_Rm
         /// </summary>
         public double vInterestRate
         {
-            // get { return InterestRate * 100; }
             get { return InterestRate; }
             set
             {
@@ -154,11 +153,6 @@ namespace prjWin_NationalBank_Rm
             get { return OpenDate; }
             set { OpenDate = value; }
         }
-
-        //public virtual double fncInterestComission()
-        //{
-        //    return vInterestRate;
-        //}
         /// <summary>
         /// Function protected abstract : Charge  commission
         /// Un CompteNonRemunéré -> clsUnpaidAccount : clsAccount

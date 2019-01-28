@@ -390,7 +390,6 @@ namespace prjWin_NationalBank_Rm
                 /// </summary>
                 if (radTransactionsDeposit.Checked && actualUnpaidAccount.vType == lblTransactionsDisplayAccountType.Text)
                 {
-                    btnTransactionsTransaction.BackColor = Color.Blue;
                     double deposit = Convert.ToDouble(txtTransactionsDeposit.Text.Trim());
                     if (actualUnpaidAccount.fncDeposit(deposit) == false)
                     {
@@ -399,6 +398,8 @@ namespace prjWin_NationalBank_Rm
                         txtTransactionsDeposit.Focus();
                         return;
                     }
+                    lblInfo.Text = actualUnpaidAccount.fncPrintBalanceUnPaidAccount();//funcion q viene de la clsAcount
+                    MessageBox.Show(deposit.ToString() + " $ has been deposited in the Unpaid Account !");
                     /// <summary>
                     /// Add actualUnpaidAccount object to actualClient.vListUnpaidAccounts.
                     /// </summary>
@@ -407,41 +408,6 @@ namespace prjWin_NationalBank_Rm
                     /// Write actualUnpaidAccount object in to XML document.
                     /// </summary>
                     clsDataSave.fncWriteUnPaidAccountsinXML();
-                    lblInfo.Text = actualUnpaidAccount.fncPrintBalanceUnPaidAccount();//funcion q viene de la clsAcount
-                    MessageBox.Show(deposit.ToString() + " $ has been deposited in the Unpaid Account !");
-
-                    /// <summary>
-                    /// writing PDF
-                    /// </summary>
-                    fncMessageBoxWritePdf();
-
-                }
-                /// <summary>
-                /// Deposit : radTransactionsDeposit : actualPaidAccount -> Paying interes in each transaction
-                /// </summary>
-                else if (radTransactionsDeposit.Checked && actualPaidAccount.vType == lblTransactionsDisplayAccountType.Text)
-                {
-                    double deposit = Convert.ToDouble(txtTransactionsDeposit.Text.Trim());
-                    // 1.- The proces strat in this function -> fncDeposit(deposit)
-                    if (actualPaidAccount.fncDeposit(deposit) == false)
-                    {
-                        MessageBox.Show("The amount to be deposited must be between 5 000 $ and 20 $ !", "Invalid Depot");
-                        txtTransactionsDeposit.Clear();
-                        txtTransactionsDeposit.Focus();
-                        return;
-                    }
-                    lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();// funcion q viene de la clase padre clsAcount
-                    // Interest added to the account function in thr clsPaidAccount
-                    double interest = actualPaidAccount.fncInterestComission();
-                    MessageBox.Show(" an amount of : " + deposit.ToString() + " $ deposit " + " +   " + interest + " $ of interest has been deposited in the Paid Accoun!");
-                    /// <summary>
-                    /// Add actualPaidAccount object to actualClient.vListUnpaidAccounts.
-                    /// </summary>
-                    actualClient.vListPaidAccounts.fncAdd(actualPaidAccount);
-                    /// <summary>
-                    /// Write actualPaidAccount object in to XML document.
-                    /// </summary>
-                    clsDataSave.fncWritePaidAccountsinXML();
                     /// <summary>
                     /// writing PDF
                     /// </summary>
@@ -454,7 +420,6 @@ namespace prjWin_NationalBank_Rm
                 {
                     int montant = Convert.ToInt32(txtTransactionsWithdraw.Text.Trim());
                     int result = actualUnpaidAccount.fncWithdrawal(montant);
-
                     switch (result)
                     {
                         case 1:
@@ -470,6 +435,8 @@ namespace prjWin_NationalBank_Rm
                             MessageBox.Show(" The minimum amount to be withdrawn shall be 20 $", " Invalid Withdrawal ");
                             return;
                     }
+                    lblInfo.Text = actualUnpaidAccount.fncPrintBalanceUnPaidAccount();//funcion q viene de la clsAcount
+                    MessageBox.Show(montant.ToString() + " $ has been withdrawen in the Unpaid Account !");
                     /// <summary>
                     /// Add actualUnpaidAccount object to actualClient.vListUnpaidAccounts.
                     /// </summary>
@@ -478,9 +445,38 @@ namespace prjWin_NationalBank_Rm
                     /// Write actualUnpaidAccount object in to XML document.
                     /// </summary>
                     clsDataSave.fncWriteUnPaidAccountsinXML();
-                    lblInfo.Text = actualUnpaidAccount.fncPrintBalanceUnPaidAccount();//funcion q viene de la clsAcount
-                    MessageBox.Show(montant.ToString() + " $ has been withdrawen in the Unpaid Account !");
-
+                    /// <summary>
+                    /// writing PDF
+                    /// </summary>
+                    fncMessageBoxWritePdf();
+                }
+                /// <summary>
+                /// Deposit : radTransactionsDeposit : actualPaidAccount -> Paying interes in each transaction
+                /// </summary>
+                else if (radTransactionsDeposit.Checked && actualPaidAccount.vType == lblTransactionsDisplayAccountType.Text)
+                {
+                    double deposit = Convert.ToDouble(txtTransactionsDeposit.Text.Trim());
+                    // 1.- The proces strat in this function -> fncDeposit(deposit)
+                    if (actualPaidAccount.fncDeposit(deposit) == false)
+                    {
+                        MessageBox.Show("The amount to be deposited must be between 5 000 $ and 20 $ !", "Invalid Depot");
+                        txtTransactionsDeposit.Clear();
+                        txtTransactionsDeposit.Focus();
+                        return;
+                    }
+                    // 2.- Print info account
+                    lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();// funcion q viene de la clase padre clsAcount
+                    // Interest added to the account function in thr clsPaidAccount
+                    double interest = actualPaidAccount.fncInterestComission();
+                    MessageBox.Show(" an amount of : " + deposit.ToString() + " $ deposit " + " +   " + interest + " $ of interest has been deposited in the Paid Accoun!");
+                    /// <summary>
+                    /// Add actualPaidAccount object to actualClient.vListUnpaidAccounts.
+                    /// </summary>
+                    actualClient.vListPaidAccounts.fncAdd(actualPaidAccount);
+                    /// <summary>
+                    /// Write actualPaidAccount object in to XML document.
+                    /// </summary>
+                    clsDataSave.fncWritePaidAccountsinXML();
                     /// <summary>
                     /// writing PDF
                     /// </summary>
@@ -509,6 +505,9 @@ namespace prjWin_NationalBank_Rm
                             MessageBox.Show(" The minimum amount to be withdrawn shall be 20 $", " Invalid Withdrawal ");
                             return;
                     }
+                    // 2.- Print info account
+                    lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();// funcion q viene de la clase padre clsAcount
+                    MessageBox.Show(montant.ToString() + " $ has been withdrawen  in the Paid Accoun!");
                     /// <summary>
                     /// Add actualPaidAccount object to actualClient.vListUnpaidAccounts.
                     /// </summary>
@@ -517,15 +516,11 @@ namespace prjWin_NationalBank_Rm
                     /// Write actualPaidAccount object in to XML document.
                     /// </summary>
                     clsDataSave.fncWritePaidAccountsinXML();
-                    lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();//funcion q viene de la clsAcount
-                    MessageBox.Show(montant.ToString() + " $ has been withdrawen  in the Paid Accoun!");
-
                     /// <summary>
                     /// writing PDF
                     /// </summary>
                     fncMessageBoxWritePdf();
                 }
-
                 /// <summary>
                 /// actualPaidAccount
                 /// </summary>
@@ -629,6 +624,7 @@ namespace prjWin_NationalBank_Rm
         // radio controls in the transaction : withdraw
         private void radTransactionsWithdraw_CheckedChanged(object sender, EventArgs e)
         {
+            lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();// funcion q viene de la clase padre clsAcount
             btnTransactionsTransaction.BackColor = Color.SteelBlue;
             btnTransactionsTransaction.Text = "Withdraw";
             txtTransactionsWithdraw.Visible = radTransactionsWithdraw.Checked;

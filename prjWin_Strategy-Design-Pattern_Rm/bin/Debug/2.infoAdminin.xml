@@ -16,12 +16,4 @@
     <password>omni</password>
     <photoString>ricardo.png</photoString>
   </Admin>
-  <Admin>
-    <number>admin03</number>
-    <name>Ricker	</name>
-    <lastName>Alcindor</lastName>
-    <e-mail>rickers@teccart.qc.ca</e-mail>
-    <password>database</password>
-    <photoString>rickers.png	</photoString>
-  </Admin>
 </Admins>
