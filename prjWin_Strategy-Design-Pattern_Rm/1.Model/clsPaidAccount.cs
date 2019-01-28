@@ -44,14 +44,24 @@ namespace prjWin_NationalBank_Rm
         /// <returns></returns>
         public override bool fncDeposit(double deposit)
         {
+            // 2.- Interest payment calcul
             vInterestPayment = fncPayInterest(deposit);
+            // 3.- Add interest to the balance
             fncPaidAccountPayInterest(vInterestPayment);
-            MessageBox.Show("an interest of : " + " " + vInterestPayment.ToString() + " $ " + " has been paid ");
+            MessageBox.Show("an interest of : " + "  " + vInterestPayment.ToString() + " $ " + " has been paid ");
             return base.fncDeposit(deposit);
         }
         public override void fncPaidAccountPayInterest(double vInterestPayment)
         {
             base.fncPaidAccountPayInterest(vInterestPayment);
+        }
+        /// <summary>
+        /// Function that returns the total inerest in the deposit
+        /// </summary>
+        /// <returns>vInterestPayment</returns>
+        public double fncInterestComission()
+        {
+            return vInterestPayment;
         }
         /// <summary>
         /// Functions : Withdrawal

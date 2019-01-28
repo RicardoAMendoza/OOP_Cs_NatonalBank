@@ -417,11 +417,12 @@ namespace prjWin_NationalBank_Rm
 
                 }
                 /// <summary>
-                /// Deposit : radTransactionsDeposit : actualPaidAccount
+                /// Deposit : radTransactionsDeposit : actualPaidAccount -> Paying interes in each transaction
                 /// </summary>
                 else if (radTransactionsDeposit.Checked && actualPaidAccount.vType == lblTransactionsDisplayAccountType.Text)
                 {
                     double deposit = Convert.ToDouble(txtTransactionsDeposit.Text.Trim());
+                    // 1.- The proces strat in this function -> fncDeposit(deposit)
                     if (actualPaidAccount.fncDeposit(deposit) == false)
                     {
                         MessageBox.Show("The amount to be deposited must be between 5 000 $ and 20 $ !", "Invalid Depot");
@@ -429,6 +430,10 @@ namespace prjWin_NationalBank_Rm
                         txtTransactionsDeposit.Focus();
                         return;
                     }
+                    lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();// funcion q viene de la clase padre clsAcount
+                    // Interest added to the account function in thr clsPaidAccount
+                    double interest = actualPaidAccount.fncInterestComission();
+                    MessageBox.Show(" an amount of : " + deposit.ToString() + " $ deposit " + " +   " + interest + " $ of interest has been deposited in the Paid Accoun!");
                     /// <summary>
                     /// Add actualPaidAccount object to actualClient.vListUnpaidAccounts.
                     /// </summary>
@@ -437,9 +442,6 @@ namespace prjWin_NationalBank_Rm
                     /// Write actualPaidAccount object in to XML document.
                     /// </summary>
                     clsDataSave.fncWritePaidAccountsinXML();
-                    lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();//funcion q viene de la clsAcount
-                    MessageBox.Show(deposit.ToString() + " $ has been deposited in the Paid Accoun!");
-
                     /// <summary>
                     /// writing PDF
                     /// </summary>
@@ -617,6 +619,7 @@ namespace prjWin_NationalBank_Rm
         // radio controls in the transaction : deposit
         private void radTransactionsDeposit_CheckedChanged(object sender, EventArgs e)
         {
+            lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();// funcion q viene de la clase padre clsAcount
             btnTransactionsTransaction.BackColor = Color.Aquamarine;
             btnTransactionsTransaction.Text = "Deposit";
             txtTransactionsDeposit.Visible = radTransactionsDeposit.Checked;

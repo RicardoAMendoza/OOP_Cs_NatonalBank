@@ -1,10 +1,11 @@
 # The National Bank
 
-## Object Oriented Programming
+## OBJECT ORIENTED PROGRAMMING
 
 ## Project name : prjWin_NationalBank_Rm
 
 Sumer - 2017
+
 
 ## Description
 
@@ -84,7 +85,7 @@ Encapsulation implements Abstraction.
  * Showing Whats Necessary,
  * Data needs to abstract from End User,
  
-[What is the difference between Abstraction and Encapsulation ?](https://www.youtube.com/watch?v=1Q4I63-hKcY)
+[Video : What is the difference between Abstraction and Encapsulation ?](https://www.youtube.com/watch?v=1Q4I63-hKcY)
  
  
 #### Inheritance is -
@@ -249,6 +250,13 @@ Identify families of algorithms as a group technology, gather them and make them
  * Microsoft Visual Studio Community 2015 Version 14.0.25425.01 Update 3
  * Programming language : C#.
  * Object Oriented Programming.
+ 
+ 
+#### Videos
+ 
+ * [C# Events and Delegates](https://www.youtube.com/watch?v=jQgwEsJISy0)  
+ * [Video : C# The Strategy Pattern](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
+ * [What is the difference between Abstraction and Encapsulation ?](https://www.youtube.com/watch?v=1Q4I63-hKcY)
  
  
 ## Installation
