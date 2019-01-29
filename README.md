@@ -200,6 +200,18 @@ We do the strategy with Interfaces, the heritage is made with an interface.
 ![Strategy design pattern](/img/sdp.jpg "Strategy design pattern")
 
 
+#### Context
+
+[@/9.StrategyDesignPattern_PDF/Context/clsWriteDocumentPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsWriteDocumentPdf.cs)
+
+[@/9.StrategyDesignPattern_PDF/Context/clsReceiptWithdrawPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptWithdrawPdf.cs)
+
+[@/9.StrategyDesignPattern_PDF/Context/clsReceiptDepositPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptDepositPdf.cs)
+
+[@/9.StrategyDesignPattern_PDF/Context/clsReceiptConsultPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptConsultPdf.cs)
+
+
+
 
 ### [MVC : Model View Controller](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller)
 
