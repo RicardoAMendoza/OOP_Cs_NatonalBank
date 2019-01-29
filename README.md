@@ -116,10 +116,47 @@ All members from the super class are inherited to the lower classes, but if they
 A child classes can *override* inherited members by providing an implementation in the parent class. 
 The member in the parent class have to be marked with the *virtual* keyword.
 
+
+1.- The Paren class -> clsAccount
+
+[OOP_Cs_NatonalBank/prjWin_Strategy-Design-Pattern_Rm/5.Abstract_Class/clsAccount.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/5.Abstract_Class/clsAccount.cs)
+
+2.- The Child class -> clsPaidAccount : clsAccount
+
+[OOP_Cs_NatonalBank/prjWin_Strategy-Design-Pattern_Rm/1.Model/clsPaidAccount.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/1.Model/clsPaidAccount.cs)
+
+
+
         Example: from the parent class : 
 		
 		public abstract class clsAccount
 		{
+			/// <summary>
+			/// Functions : Deposit 
+			/// </summary>
+			/// <param name="deposit">double deposit</param>
+			/// <returns>base.fncDeposit(deposit)</returns>
+			public override bool fncDeposit(double deposit)
+			{
+				// 2.- Interest payment calcul
+				vInterestPayment = fncPayInterest(deposit);
+				// 3.- Add interest to the balance
+				fncPaidAccountPayInterest(vInterestPayment);
+				MessageBox.Show("an interest of : " + "  " + vInterestPayment.ToString() + " $ " + " has been paid ");
+				return base.fncDeposit(deposit);
+			}
+		}
+		
+		
+		in the child class : 
+		
+		public class clsPaidAccount : clsAccount
+		{
+			/// <summary>
+			/// Functions : Deposit
+			/// </summary>
+			/// <param name="deposit">double deposit</param>
+			/// <returns>true</returns>
 			public virtual bool fncDeposit(double deposit)
 			{
 				if (deposit < 20 || 500 < deposit)
@@ -131,20 +168,6 @@ The member in the parent class have to be marked with the *virtual* keyword.
 					vBalance += deposit;
 					return true;
 				}
-			}
-		}
-		
-		
-		in the child class : 
-		
-		public class clsPaidAccount : clsAccount
-		{
-			public override bool fncDeposit(double deposit)
-			{
-				vInterestPayment = fncPayInterest(deposit);
-				fncPaidAccountPayInterest(vInterestPayment);
-				MessageBox.Show("an interest of : " + " " + vInterestPayment.ToString() + " $ " + " has been paid ");
-				return base.fncDeposit(deposit);
 			}
 		}
 		
@@ -206,6 +229,7 @@ In the projec we can watch the MVC in the folder projet as follows.
 But the heart of the MVC, the controllers are clsDataSource and clsDataSave. The clsDataSource takes the data
 from the TXT files, delivers the data as the inputs to the application and the result goes to clsDataSave
 and this class save the outputs in XML files.
+
 
 1.- Data source from text documents (document.txt)
 

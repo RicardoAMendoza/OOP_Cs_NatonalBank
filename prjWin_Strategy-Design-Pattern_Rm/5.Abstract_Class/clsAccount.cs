@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace prjWin_NationalBank_Rm
 {
-    /// <summary>
-    /// Ricardo Mendoza
-    /// Strategy Design Patern
-    /// Institut Teccart
-    /// www.teccart.qc.ca
-    /// Montréal, Québec
-    /// Août 2017
-    /// </summary>
+    /*
+    * This project uses the following licenses:
+    *  MIT License
+    *  Copyright (c) 2017 Ricardo Mendoza 
+    *  Montréal Québec Canada
+    *  Institut Teccart
+    *  www.teccart.qc.ca
+    *  Août 2017
+   */
     public abstract class clsAccount
     {
         /// <summary>
@@ -37,7 +38,6 @@ namespace prjWin_NationalBank_Rm
         /// ClsDate OpenDate -> when an account is open
         /// </summary>
         private clsDate OpenDate;
-
         /// <summary>
         /// Constructor that takes eigth arguments UnPaidAccount -> in the Function protected abstract : Charge  commission.
         /// </summary>
@@ -52,7 +52,6 @@ namespace prjWin_NationalBank_Rm
             Balance = vBalance;
             OpenDate = new clsDate(vDay, vMonth, vYear);
         }
-
         /// <summary>
         /// Constructor that takes seven arguments -> in the Function protected abstract : Pay interest.
         /// </summary>
@@ -188,8 +187,8 @@ namespace prjWin_NationalBank_Rm
         /// <summary>
         /// Functions : Deposit
         /// </summary>
-        /// <param name="deposit"></param>
-        /// <returns></returns>
+        /// <param name="deposit">double deposit</param>
+        /// <returns>true</returns>
         public virtual bool fncDeposit(double deposit)
         {
             if (deposit < 20 || 500 < deposit)
