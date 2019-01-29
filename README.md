@@ -65,6 +65,63 @@ We implemented with C# and Visual Studio the abstract classes account (clsAccoun
 
 We write in C# a program to test our class diagram and to handle the whole bank, employees, clients and accounts info. 
 
+	
+### Prerequisites
+
+ * Microsoft Visual Studio Community 2015 Version 14.0.25425.01 Update 3
+ * Programming language : C#.
+ * Object Oriented Programming.
+ 
+ 
+#### Videos
+ 
+ * [C# Events and Delegates](https://www.youtube.com/watch?v=jQgwEsJISy0)  
+ * [Video : C# The Strategy Pattern](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
+ * [What is the difference between Abstraction and Encapsulation ?](https://www.youtube.com/watch?v=1Q4I63-hKcY)
+ 
+ 
+## Installation
+
+### Download and install. 
+
+ * [Install Visual Studio](https://visualstudio.microsoft.com/)
+ * [Dowland the MVC_ComboBox_selector project](https://github.com/RicardoAMendoza/The_NationalBank_Rm)
+ 
+ 
+## Author
+
+* **Ricardo Mendoza -  Programmer Analyst**
+ 
+ 
+ ## Running the tests
+ 
+ 
+ ## Built With
+
+* [Microsoft Visual Studio Community 2015 Version 14.0.25425.01 Update 3](https://visualstudio.microsoft.com/)
+
+
+## Versions and source manager. 
+
+This project uses GitHub.com as source manager in the following repository:
+
+https://github.com/RicardoAMendoza/The_NationalBank_Rm
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+- Copyright Ricardo Mendoza
+- the MIT License (MIT)
+
+
+## Acknowledgments
+
+* [Andy Del Risco](https://www.linkedin.com/in/andydelriscomanzanares/) - MENTOR, *Technicien Informatique Cl. Principale* [École des métiers de l’aérospatiale de Montréal](http://ecole-metiers-aerospatiale.csdm.ca/)
+* [Fernand Tonye](https://www.linkedin.com/in/fernand-tonye-6a46532b/) - MENTOR, *Chief d'Equipe Informatique pour les enseignants* [Institut Teccart](http://www.teccart.qc.ca/)
+* [Charles Vilaisak](https://www.linkedin.com/in/cvilaisak/) - MENTOR, *Registraire à l'École nationale de cirque* [École nationale de cirque](https://www.linkedin.com/school/-cole-nationale-de-cirque/)
+* [Institut Teccart](http://www.teccart.qc.ca/)
 
 
 ### Concepts.
@@ -132,27 +189,6 @@ The member in the parent class have to be marked with the *virtual* keyword.
 		public abstract class clsAccount
 		{
 			/// <summary>
-			/// Functions : Deposit 
-			/// </summary>
-			/// <param name="deposit">double deposit</param>
-			/// <returns>base.fncDeposit(deposit)</returns>
-			public override bool fncDeposit(double deposit)
-			{
-				// 2.- Interest payment calcul
-				vInterestPayment = fncPayInterest(deposit);
-				// 3.- Add interest to the balance
-				fncPaidAccountPayInterest(vInterestPayment);
-				MessageBox.Show("an interest of : " + "  " + vInterestPayment.ToString() + " $ " + " has been paid ");
-				return base.fncDeposit(deposit);
-			}
-		}
-		
-		
-		in the child class : 
-		
-		public class clsPaidAccount : clsAccount
-		{
-			/// <summary>
 			/// Functions : Deposit
 			/// </summary>
 			/// <param name="deposit">double deposit</param>
@@ -168,6 +204,27 @@ The member in the parent class have to be marked with the *virtual* keyword.
 					vBalance += deposit;
 					return true;
 				}
+			}
+		}
+		
+		
+		in the child class : 
+		
+		public class clsPaidAccount : clsAccount
+		{
+			/// <summary>
+			/// Functions : Deposit 
+			/// </summary>
+			/// <param name="deposit">double deposit</param>
+			/// <returns>base.fncDeposit(deposit)</returns>
+			public override bool fncDeposit(double deposit)
+			{
+				// 2.- Interest payment calcul
+				vInterestPayment = fncPayInterest(deposit);
+				// 3.- Add interest to the balance
+				fncPaidAccountPayInterest(vInterestPayment);
+				MessageBox.Show("an interest of : " + "  " + vInterestPayment.ToString() + " $ " + " has been paid ");
+				return base.fncDeposit(deposit);
 			}
 		}
 		
@@ -286,63 +343,3 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
                 ApplicationWarned(this, new clsAdminEventAgrs("The application will be closed in 2 minuts !!"));
             }
         }
-
-		
-	
-### Prerequisites
-
- * Microsoft Visual Studio Community 2015 Version 14.0.25425.01 Update 3
- * Programming language : C#.
- * Object Oriented Programming.
- 
- 
-#### Videos
- 
- * [C# Events and Delegates](https://www.youtube.com/watch?v=jQgwEsJISy0)  
- * [Video : C# The Strategy Pattern](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
- * [What is the difference between Abstraction and Encapsulation ?](https://www.youtube.com/watch?v=1Q4I63-hKcY)
- 
- 
-## Installation
-
-### Download and install. 
-
- * [Install Visual Studio](https://visualstudio.microsoft.com/)
- * [Dowland the MVC_ComboBox_selector project](https://github.com/RicardoAMendoza/The_NationalBank_Rm)
- 
- 
-## Author
-
-* **Ricardo Mendoza -  Programmer Analyst**
- 
- 
- ## Running the tests
- 
- 
- ## Built With
-
-* [Microsoft Visual Studio Community 2015 Version 14.0.25425.01 Update 3](https://visualstudio.microsoft.com/)
-
-
-## Versions and source manager. 
-
-This project uses GitHub.com as source manager in the following repository:
-
-https://github.com/RicardoAMendoza/The_NationalBank_Rm
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-- Copyright Ricardo Mendoza
-- the MIT License (MIT)
-
-
-## Acknowledgments
-
-* [Andy Del Risco](https://www.linkedin.com/in/andydelriscomanzanares/) - MENTOR, *Technicien Informatique Cl. Principale* [École des métiers de l’aérospatiale de Montréal](http://ecole-metiers-aerospatiale.csdm.ca/)
-* [Fernand Tonye](https://www.linkedin.com/in/fernand-tonye-6a46532b/) - MENTOR, *Chief d'Equipe Informatique pour les enseignants* [Institut Teccart](http://www.teccart.qc.ca/)
-* [Charles Vilaisak](https://www.linkedin.com/in/cvilaisak/) - MENTOR, *Registraire à l'École nationale de cirque* [École nationale de cirque](https://www.linkedin.com/school/-cole-nationale-de-cirque/)
-* [Institut Teccart](http://www.teccart.qc.ca/)
-
