@@ -221,6 +221,12 @@ We do the strategy with Interfaces, the heritage is made with an interface.
 * [IntWritePdf -> @/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs)
 
 
+##### Creating a Bank
+
+* [IntWritePdf -> @/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs)
+
+
+
 #### Implementation
 
 ##### Classes that inherit from the interface
@@ -363,6 +369,10 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
 Transactions.
 
 ![Transactions with the app](/img/transactionGIF.gif "Transaction")
+
+Create a Bank.
+
+![Create a Bank](/img/createaBankGIF.gif "CreateaBank")
  
  
 ## Built With
