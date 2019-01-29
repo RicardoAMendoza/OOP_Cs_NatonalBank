@@ -9,11 +9,11 @@
     <photoString>andy.png	</photoString>
   </Admin>
   <Admin>
-    <number>admin02</number>
-    <name>Ricardo	</name>
-    <lastName>Mendoza</lastName>
-    <e-mail>omnimtv@gmail.com</e-mail>
-    <password>omni</password>
-    <photoString>ricardo.png</photoString>
+    <number>admin03</number>
+    <name>Ricker	</name>
+    <lastName>Alcindor</lastName>
+    <e-mail>rickers@teccart.qc.ca</e-mail>
+    <password>database</password>
+    <photoString>rickers.png	</photoString>
   </Admin>
 </Admins>

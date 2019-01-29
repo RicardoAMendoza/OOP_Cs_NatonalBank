@@ -364,15 +364,29 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
  
 ## Running the tests
 
+
 ### Use of the application.
 
-Transactions.
+
+#### Transactions.
+
 
 ![Transactions with the app](/img/transactionGIF.gif "Transaction")
 
-Create a Bank.
+
+
+#### Create a Bank.
+
 
 ![Create a Bank](/img/createaBankGIF.gif "CreateaBank")
+
+
+
+#### Admin system.
+
+
+![Admin system](/img/adminSystemGIF.gif "AdminSystem")
+ 
  
  
 ## Built With
