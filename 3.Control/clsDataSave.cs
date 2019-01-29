@@ -11,14 +11,16 @@ namespace prjWin_NationalBank_Rm
 {
     public static class clsDataSave
     {
-        /// <summary>
-        /// Ricardo Mendoza
-        /// Strategy Design Patern
-        /// Institut Teccart
-        /// www.teccart.qc.ca
-        /// Montréal, Québec
-        /// Août 2017
-        /// </summary>
+        /*
+        * This project uses the following licenses:
+        *  MIT License
+        *  Copyright (c) 2017 Ricardo Mendoza 
+        *  Montréal Québec Canada
+        *  Institut Teccart
+        *  www.teccart.qc.ca
+        *  Août 2017
+        */
+        // Attributes
         public static clsListDirecteurs listDirectors = new clsListDirecteurs();
         public static clsListAdmins listAdmins = new clsListAdmins();
         public static clsListAgencies listAgencies = new clsListAgencies();
@@ -26,11 +28,12 @@ namespace prjWin_NationalBank_Rm
         public static clsListClients listClients = new clsListClients();
         public static clsListPaidAccounts listPaidAccounts = new clsListPaidAccounts();
         public static clsListUnpaidAccounts listUnpaidAccounts = new clsListUnpaidAccounts();
-
         public static string agencyNumber;
 
-
-        // XML files
+        /// <summary>
+        /// Write directors information in to a XML file
+        /// </summary>
+        /// <returns>procedure</returns>
         public static void fncWriteDirectorsinlineXML()
         {
             listDirectors = frmBank.fncGetvListDirecteurs();
@@ -56,7 +59,10 @@ namespace prjWin_NationalBank_Rm
             writer.Close();
             MessageBox.Show(listDirectors.Quantity.ToString() + " Directors were added to a xml document !");
         }
-
+        /// <summary>
+        /// Write admin information in to a XML file
+        /// </summary>
+        /// <returns>procedure</returns>
         public static void fncWriteAdminsinXML()
         {
            listAdmins = frmBank.fncGetvListAdmins();
@@ -82,7 +88,10 @@ namespace prjWin_NationalBank_Rm
             writer.Close();
             MessageBox.Show(listAdmins.Quantity.ToString() + " Admins were added to a xml document !");
         }
-
+        /// <summary>
+        /// Write agencies information in to a XML file
+        /// </summary>
+        /// <returns>procedure</returns>
         public static void fncWriteAgencieslineinXML()
         {
             try
@@ -113,6 +122,10 @@ namespace prjWin_NationalBank_Rm
                 MessageBox.Show(ex.Message);
             }
         }
+        /// <summary>
+        /// Write employees information in to a XML file
+        /// </summary>
+        /// <returns>procedure</returns>
         public static void fncWriteEmployeeslineinXML()
         {
             try
@@ -147,6 +160,10 @@ namespace prjWin_NationalBank_Rm
                 MessageBox.Show(ex.Message);
             }
         }
+        /// <summary>
+        /// Write clients information in to a XML file
+        /// </summary>
+        /// <returns>procedure</returns>
         public static void fncWriteClientslineinXML()
         {
             try
@@ -185,7 +202,10 @@ namespace prjWin_NationalBank_Rm
                 MessageBox.Show(ex.Message);
             }
         }
-
+        /// <summary>
+        /// Write paid accounts information in to a XML file
+        /// </summary>
+        /// <returns>procedure</returns>
         public static void fncWritePaidAccountsinXML()
         {
            listPaidAccounts = frmBank.fncGetvListPaidAccounts();
@@ -212,7 +232,10 @@ namespace prjWin_NationalBank_Rm
             writer.Close();
             MessageBox.Show(listPaidAccounts.Quantity.ToString() + " Paid Accounts were added to a xml document !");
         }
-
+        /// <summary>
+        /// Write un paid account information in to a XML file
+        /// </summary>
+        /// <returns>procedure</returns>
         public static void fncWriteUnPaidAccountsinXML()
         {
             listUnpaidAccounts = frmBank.fncGetvListUnPaidAccounts();

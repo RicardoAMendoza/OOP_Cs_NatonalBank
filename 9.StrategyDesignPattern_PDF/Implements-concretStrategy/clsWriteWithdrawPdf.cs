@@ -7,8 +7,20 @@ using iTextSharp.text.pdf; // pdf
 
 namespace prjWin_NationalBank_Rm
 {
+    /*
+    * This project uses the following licenses:
+    *  MIT License
+    *  Copyright (c) 2017 Ricardo Mendoza 
+    *  Montréal Québec Canada
+    *  Institut Teccart
+    *  www.teccart.qc.ca
+    *  Août 2017
+    */
     public class clsWriteWithdrawPdf : IntWritePdf
     {
+        /// <summary>
+        /// Inherited function
+        /// </summary>
         public void fncWriteDocumentPdf()
         {
             try
@@ -18,6 +30,7 @@ namespace prjWin_NationalBank_Rm
                 PdfWriter writingPdf = PdfWriter.GetInstance(doc, new FileStream("NB_Sdp_Withdraw.pdf", FileMode.Create));
                 doc.Open(); // Open document to write
                 DateTime today = clsDataSource.fncTodayDate();
+                // Written text in to the pdf
                 Paragraph paregraph = new Paragraph("National Bank of Canada : " + "\n" + "Date : " + today.ToString() + "\n" + "WITHDRAW." + "\n" + actualClient.fncDisplayHuman());
                 doc.Add(paregraph);
                 doc.Close(); // Close document

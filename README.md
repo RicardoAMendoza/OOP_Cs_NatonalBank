@@ -199,7 +199,6 @@ We do the strategy with Interfaces, the heritage is made with an interface.
 
 ![Strategy design pattern](/img/sdp.jpg "Strategy design pattern")
 
-
 #### Context
 
 ##### Abstract class
@@ -231,6 +230,7 @@ We do the strategy with Interfaces, the heritage is made with an interface.
 * [clsWriteWithdrawPdf -> @/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteWithdrawPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteWithdrawPdf.cs)
 
 * [clsWriteConsultPdf -> @/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteConsultPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteConsultPdf.cs)
+
 
 
 
@@ -341,7 +341,7 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
 ### Download and install. 
 
  * [Install Visual Studio](https://visualstudio.microsoft.com/)
- * [Dowland the MVC_ComboBox_selector project](https://github.com/RicardoAMendoza/The_NationalBank_Rm)
+ * [Dowland the The National Bank project](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank)
  
  
 ## Author
@@ -361,7 +361,7 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
 
 This project uses GitHub.com as source manager in the following repository:
 
-https://github.com/RicardoAMendoza/The_NationalBank_Rm
+https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank
 
 
 ## License

@@ -14,7 +14,6 @@ namespace prjWin_NationalBank_Rm
    *  www.teccart.qc.ca
    *  Août 2017
    */
-
     // STRATEGY
     public interface IntWritePdf
     {

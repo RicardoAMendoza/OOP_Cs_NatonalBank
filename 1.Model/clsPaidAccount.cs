@@ -7,17 +7,17 @@ using System.Windows.Forms;
 
 namespace prjWin_NationalBank_Rm
 {
-    /// <summary>
-    /// Ricardo Mendoza
-    /// Strategy Design Patern
-    /// Institut Teccart
-    /// www.teccart.qc.ca
-    /// Montréal, Québec
-    /// Août 2017
-    /// </summary>
+    /*
+    * This project uses the following licenses:
+    *  MIT License
+    *  Copyright (c) 2017 Ricardo Mendoza 
+    *  Montréal Québec Canada
+    *  Institut Teccart
+    *  www.teccart.qc.ca
+    *  Août 2017
+    */
     public class clsPaidAccount : clsAccount
     {
-
         /// <summary>
         /// Constructor that takes seven arguments -> in the Function protected abstract : Pay interest.
         /// </summary>
@@ -40,18 +40,28 @@ namespace prjWin_NationalBank_Rm
         /// <summary>
         /// Functions : Deposit 
         /// </summary>
-        /// <param name="deposit"></param>
-        /// <returns></returns>
+        /// <param name="deposit">double deposit</param>
+        /// <returns>base.fncDeposit(deposit)</returns>
         public override bool fncDeposit(double deposit)
         {
+            // 2.- Interest payment calcul
             vInterestPayment = fncPayInterest(deposit);
+            // 3.- Add interest to the balance
             fncPaidAccountPayInterest(vInterestPayment);
-            MessageBox.Show("an interest of : " + " " + vInterestPayment.ToString() + " $ " + " has been paid ");
+            MessageBox.Show("an interest of : " + "  " + vInterestPayment.ToString() + " $ " + " has been paid ");
             return base.fncDeposit(deposit);
         }
         public override void fncPaidAccountPayInterest(double vInterestPayment)
         {
             base.fncPaidAccountPayInterest(vInterestPayment);
+        }
+        /// <summary>
+        /// Function that returns the total inerest in the deposit
+        /// </summary>
+        /// <returns>vInterestPayment</returns>
+        public double fncInterestComission()
+        {
+            return vInterestPayment;
         }
         /// <summary>
         /// Functions : Withdrawal
