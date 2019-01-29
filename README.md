@@ -276,6 +276,8 @@ and this class save the outputs in XML files.
 ![Controller](/img/controller.jpg "Controller is the heart of the MVC")
 
 
+##### [N.B : A static class can be used as a convenient container for sets of methods that just operate on input parameters and do not have to get or set any internal instance fields.](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members)
+
 
 ### Events and delegates
 

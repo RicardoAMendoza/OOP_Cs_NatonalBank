@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Employees>
-  <Employee idCounter="8" number="E2E2" lastName="Nguiya" photo="nguiya.png" year="2013" month="2" day="23">
-    <name>Rauoul</name>
+  <Employee idCounter="11" number="E1E1" lastName="Zamanego" photo="zamanego.png" year="2017" month="8" day="15">
+    <name>Juan</name>
   </Employee>
-  <Employee idCounter="9" number="E5E5" lastName="Houda" photo="houda.png" year="2012" month="1" day="1">
-    <name>Maria</name>
+  <Employee idCounter="12" number="E3E3" lastName="Silva" photo="silva.png" year="2014" month="9" day="19">
+    <name>Cesar</name>
   </Employee>
-  <Employee idCounter="10" number="E6E6" lastName="Arteaga" photo="arteaga.png" year="2011" month="2" day="3">
-    <name>Mario</name>
+  <Employee idCounter="13" number="E4E4" lastName="Fernandez" photo="fernandez.png" year="2013" month="11" day="15">
+    <name>Ana</name>
   </Employee>
 </Employees>
