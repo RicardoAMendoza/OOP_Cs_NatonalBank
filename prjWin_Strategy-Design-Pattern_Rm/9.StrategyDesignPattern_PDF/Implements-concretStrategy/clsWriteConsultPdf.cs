@@ -35,6 +35,8 @@ namespace prjWin_NationalBank_Rm
                 doc.Add(paregraph);
                 doc.Close(); // Close document
                 MessageBox.Show("a PDF has been written");
+                // How to automatically open ITextSharp PDF after creating file
+                System.Diagnostics.Process.Start("D:\\10.Portafolio\\prjWin_NationalBank_Rm\\prjWin_Strategy-Design-Pattern_Rm\\bin\\Debug\\NB_Sdp_Consult.pdf");
             }
             catch (Exception ex)
             {

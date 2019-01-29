@@ -346,9 +346,14 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
  * [Dowland the The National Bank project](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank)
  
  
+  ### GIF
+ 
+ * [Capture d'écran animée](https://www.cockos.com/licecap/)
+ 
+ 
 ## Author
 
-* **Ricardo Mendoza -  Programmer Analyst**
+* **[Ricardo Mendoza](https://www.linkedin.com/in/ricardo-mendoza-b8769849/)** - *Programmer Analyst Jr* 
  
  
  ## Running the tests
