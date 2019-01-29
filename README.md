@@ -202,14 +202,35 @@ We do the strategy with Interfaces, the heritage is made with an interface.
 
 #### Context
 
-[@/9.StrategyDesignPattern_PDF/Context/clsWriteDocumentPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsWriteDocumentPdf.cs)
+##### Abstract class
 
-[@/9.StrategyDesignPattern_PDF/Context/clsReceiptWithdrawPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptWithdrawPdf.cs)
+* [clsWriteDocumentPdf -> @/9.StrategyDesignPattern_PDF/Context/clsWriteDocumentPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsWriteDocumentPdf.cs)
 
-[@/9.StrategyDesignPattern_PDF/Context/clsReceiptDepositPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptDepositPdf.cs)
+##### Child class
 
-[@/9.StrategyDesignPattern_PDF/Context/clsReceiptConsultPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptConsultPdf.cs)
+* [clsReceiptWithdrawPdf -> @/9.StrategyDesignPattern_PDF/Context/clsReceiptWithdrawPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptWithdrawPdf.cs)
 
+* [clsReceiptDepositPdf -> @/9.StrategyDesignPattern_PDF/Context/clsReceiptDepositPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptDepositPdf.cs)
+
+* [clsReceiptConsultPdf -> @/9.StrategyDesignPattern_PDF/Context/clsReceiptConsultPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Context/clsReceiptConsultPdf.cs)
+
+
+#### Strategy
+
+##### Interface
+
+* [IntWritePdf -> @/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs)
+
+
+#### Implementation
+
+##### Classes that inherit from the interface
+
+* [clsWriteDepositPdf -> @/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteDepositPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteDepositPdf.cs)
+
+* [clsWriteWithdrawPdf -> @/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteWithdrawPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteWithdrawPdf.cs)
+
+* [clsWriteConsultPdf -> @/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteConsultPdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Implements-concretStrategy/clsWriteConsultPdf.cs)
 
 
 
