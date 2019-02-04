@@ -340,8 +340,15 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
 #### Videos
  
  * [C# Events and Delegates](https://www.youtube.com/watch?v=jQgwEsJISy0)  
- * [Video : C# The Strategy Pattern](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
+ * [Video : C# The Strategy Pattern](https://www.youtube.com/watch?v=JBSt2L_faD8)
  * [What is the difference between Abstraction and Encapsulation ?](https://www.youtube.com/watch?v=1Q4I63-hKcY)
+ 
+ 
+ ##### PDF
+ 
+ * [How to Create a PDF document file in C#](https://www.youtube.com/watch?v=e1uMdAG8L3Y)  
+ * [How to Create a PDF document in C# using iTextSharp](https://www.youtube.com/watch?v=94t2ayF1l3o&t=316s)
+ * [iTextSharp : How to automatically open ITextSharp PDF after creating file](https://www.youtube.com/watch?v=ZbXfzwsZciw)
  
  
 ## Installation
