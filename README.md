@@ -189,6 +189,10 @@ Abstract can be used with classes, methods, properties, indexers, and events.
 
 ### Strategy design pattern
 
+The algorithms can be selected at runtime. 
+
+![Strategy design pattern](/img/PatternClassDiagrm.jpg "Strategy design pattern")
+
 We identify families of algorithms as a group technology, we gather them and we can make them interchangeable.
 We do the strategy with Interfaces, the heritage is made with an interface.
 
