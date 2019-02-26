@@ -287,9 +287,12 @@ and this class save the outputs in XML files.
 
 ### Events and delegates
 
+#### Events
+
 An event is a message sent by an object to signal the occurrence of an action.
 
  * Events. *Tool that helps communication betwen classes and helps to extend applications.*
+           *Used in building Loosely Coupled Applications : This is an application easy to expand without changing or breaking the existing capabilities.*
 
 A delegate is a class that can hold a reference to a method. 
 Unlike other classes, a delegate class has a signature, and it can hold references only to methods that match its signature.
