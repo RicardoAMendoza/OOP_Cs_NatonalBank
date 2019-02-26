@@ -225,11 +225,6 @@ We do the strategy with Interfaces, the heritage is made with an interface.
 * [IntWritePdf -> @/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs)
 
 
-##### Creating a Bank
-
-* [IntWritePdf -> @/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/prjWin_Strategy-Design-Pattern_Rm/9.StrategyDesignPattern_PDF/Strategy/IntWritePdf.cs)
-
-
 
 #### Implementation
 
