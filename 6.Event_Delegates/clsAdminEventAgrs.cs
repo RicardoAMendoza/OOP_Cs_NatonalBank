@@ -5,15 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace prjWin_NationalBank_Rm
-{ 
-    /// <summary>
-    /// Ricardo Mendoza
-    /// Strategy Design Patern
-    /// Institut Teccart
-    /// www.teccart.qc.ca
-    /// Montréal, Québec
-    /// Août 2017
-    /// </summary>
+{
+    /*
+    * This project uses the following licenses:
+    *  MIT License
+    *  Copyright (c) 2017 Ricardo Mendoza 
+    *  Montréal Québec Canada
+    *  Institut Teccart
+    *  www.teccart.qc.ca
+    *  Août 2017
+    */
     public class clsAdminEventAgrs : EventArgs
     {
         // Attributes

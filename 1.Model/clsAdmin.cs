@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace prjWin_NationalBank_Rm
 {
-    /// <summary>
-    /// Ricardo Mendoza
-    /// National Bank
-    /// Institut Teccart
-    /// www.teccart.qc.ca
-    /// Montréal, Québec
-    /// Août 2017
-    /// </summary> 
+    /*
+    * This project uses the following licenses:
+    *  MIT License
+    *  Copyright (c) 2017 Ricardo Mendoza 
+    *  Montréal Québec Canada
+    *  Institut Teccart
+    *  www.teccart.qc.ca
+    *  Août 2017
+    */
     public class clsAdmin : clsHuman
     {
         /// <summary>
@@ -42,7 +43,8 @@ namespace prjWin_NationalBank_Rm
         /// public event AdminDelegate ApplicationClosed;
         /// </summary>
         // EventHandler
-        // EventHandler<TEventArgs>
+        // EventHandler<TEventArgs> : generic class
+        // Publishing an Event without aditional data
         public event EventHandler<clsAdminEventAgrs> ApplicationClosed;
         public event EventHandler<clsAdminEventAgrs> ApplicationWarned;
 
@@ -82,6 +84,7 @@ namespace prjWin_NationalBank_Rm
             Password = clsDataSource.fncEmptyConstructor();
             Tick_Tack = 1;
         }
+        //  Satart Publisher
         /// <summary>
         /// 3. Raise the event
         /// </summary>
@@ -98,7 +101,8 @@ namespace prjWin_NationalBank_Rm
             {
                 ApplicationWarned(this, new clsAdminEventAgrs("The application will be closed in 2 minuts !!"));
             }
-        }
+        } //  End Publisher
+
         /// <summary>
         /// Timer : define the time to close application
         /// </summary>

@@ -8,14 +8,15 @@ using iTextSharp.text.pdf; // pdf
 
 namespace prjWin_NationalBank_Rm
 {
-    /// <summary>
-    /// Ricardo Mendoza
-    /// Strategy Design Patern
-    /// Institut Teccart
-    /// www.teccart.qc.ca
-    /// Montréal, Québec
-    /// Août 2017
-    /// </summary>
+    /*
+    * This project uses the following licenses:
+    *  MIT License
+    *  Copyright (c) 2017 Ricardo Mendoza 
+    *  Montréal Québec Canada
+    *  Institut Teccart
+    *  www.teccart.qc.ca
+    *  Août 2017
+    */
     public partial class frmBank : Form
     {
         /// <summary>
@@ -1070,10 +1071,8 @@ namespace prjWin_NationalBank_Rm
 
         // Admin Space Admin Admin
         /// <summary>
-        ///  btnAdminAdmin -> this button is going to open the admin
+        ///  btnAdminAdmin -> this button opens the admin
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void btnAdminAdmin_Click(object sender, EventArgs e)
         {
             try
@@ -1091,7 +1090,6 @@ namespace prjWin_NationalBank_Rm
                     txtAdminAdminNumber.Clear();
                     txtAdminAdminNumber.Focus();
                     return;
-
                 }
                 else
                 {
@@ -1106,18 +1104,24 @@ namespace prjWin_NationalBank_Rm
                     groupBoxAdminClients.Enabled = groupBoxAdminAdviser.Enabled = groupBoxAdminPaidAccount.Enabled = groupBoxAdminUnPaidAccount.Enabled = true;
                     pictureBoxAdminSpaceAdminAdmin.Image = System.Drawing.Image.FromFile(Application.StartupPath + @"/Admins/" + admin.vPhoto);
                     // MessageBox.Show(admin.vNumber + admin.vPassword);
-                    // Event
-                    admin.ApplicationClosed += fncAdminHandler;
+                    
+                    // Start suscriber
+                    // Handler
+                    admin.ApplicationClosed += fncAdminHandler; // reference or pointer to this methode
                     listBoxAdmin.Items.Add(admin.vName + "" + admin.vLastName);
-                    // Event
+
+                    // Event : suscriber
                     admin.OnApplicationClosed();
                     // Timer
                     lblTick_Tack.Visible = true;
                     listBoxAdmin.Visible = true;
                     CLock.Interval = interval; // milliseconds : 1s
-                    // Event
-                    CLock.Elapsed += OnTimeEvent; // System.Timers;
+
+                    // Handler
+                    // System.Timers.Timer CLock = new System.Timers.Timer();
+                    CLock.Elapsed += OnTimeEvent; // System.Timers; // reference or pointer to this methode
                     CLock.Start();
+                    // End suscriber
                 }
             }
             catch (Exception ex)
@@ -1419,8 +1423,9 @@ namespace prjWin_NationalBank_Rm
             listBoxAdmin.Items.Add(e.Message);
         }
 
+        //  Start Suscribers
         /// <summary>
-        /// Event
+        /// Handler
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -1471,11 +1476,8 @@ namespace prjWin_NationalBank_Rm
                 MessageBox.Show(ex.Message);
             }
         }
-
-        
-
         /// <summary>
-        /// Event
+        /// Handler
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -1483,7 +1485,7 @@ namespace prjWin_NationalBank_Rm
         {
             CLock.Stop();
             Application.DoEvents();
-        }
+        } // End Suscribers
 
         // Start Admin Space : Director
         /// <summary>

@@ -287,6 +287,7 @@ and this class save the outputs in XML files.
 
 ### Events and delegates
 
+
 #### Events
 
 An event is a message sent by an object to signal the occurrence of an action.
@@ -294,27 +295,55 @@ An event is a message sent by an object to signal the occurrence of an action.
  * Events : *Tool that helps communication betwen classes and helps to extend applications.*
  * Used in building Loosely Coupled Applications : *This is an application easy to expand without changing or breaking the existing capabilities.*
 
+ 
+#### Delegate
+
 A delegate is a class that can hold a reference to a method. 
 Unlike other classes, a delegate class has a signature, and it can hold references only to methods that match its signature.
   
  * Delegates. *Agreement / Contract between Publisher and Subscriber, Determines the signature of the event handler method in Subscriber.*
  
   
-[Video : C# Events and Delegates](https://www.youtube.com/watch?v=jQgwEsJISy0)  
+[Video : C# Events and Delegates](https://www.youtube.com/watch?v=jQgwEsJISy0)
+
+
+#### [Publisher](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/1.Model/clsAdmin.cs) 
 
         
 		
-		DECLARE AN EVENT
-        1. define delegate
-           public delegate void AdminDelegate(object source, clsAdminEventAgrs e);
-        2. define un event based on the delegate
-           public event AdminDelegate ApplicationClosed;
-
+	public class clsAdmin : clsHuman
+    {
+        /// <summary>
+		/// OLD METHODE
+        /// DECLARE AN EVENT
+        /// 1. define delegate
+        /// public delegate void AdminDelegate(object source, clsAdminEventAgrs e);
+        /// 2. define un event based on the delegate
+        /// public event AdminDelegate ApplicationClosed;
+		/// NEW METHODE
+		/// EventHandler
+        /// EventHandler<TEventArgs> : generic class
+        /// Publishing an Event without aditional data
+        /// </summary>
         public event EventHandler<clsAdminEventAgrs> ApplicationClosed;
         public event EventHandler<clsAdminEventAgrs> ApplicationWarned;
-		
-		3. Raise the event
 
+        /// <summary>
+        /// Constructor that takes six arguments.
+        /// </summary>
+        public clsAdmin(int vTick_Tack, string vNumber, string vName, string vLastName, string vEmail, string vPassword, string vPhoto) : base(vNumber, vName, vLastName, vPhoto)
+        {
+            clsAdmin.staticNbcounter++;
+            adminIdCounter = staticNbcounter;
+            nbAdmin++;
+            Email = vEmail;
+            Password = vPassword;
+            Tick_Tack = vTick_Tack * 1000;
+        }
+        //  Satart Publisher
+        /// <summary>
+        /// 3. Raise the event
+        /// </summary>
         public void OnApplicationClosed()
         {
             if (ApplicationClosed != null)
@@ -322,16 +351,83 @@ Unlike other classes, a delegate class has a signature, and it can hold referenc
                 ApplicationClosed(this, new clsAdminEventAgrs("An event started : you just have 5 minuts in admin control !!"));
             }
         }
-		
         public void OnApplicationWarned()
         {
             if (ApplicationWarned != null)
             {
                 ApplicationWarned(this, new clsAdminEventAgrs("The application will be closed in 2 minuts !!"));
             }
-        }
+        } //  End Publisher
+    }
 
 		
+#### [Suscriber](https://github.com/RicardoAMendoza/OOP_Cs_NatonalBank/blob/master/2.View/frmBank.cs)
+
+    public partial class frmBank : Form
+    {
+        //  Admin Space Admin Admin
+        /// <summary>
+        ///  btnAdminAdmin -> this button opens the admin
+        /// </summary>
+        private void btnAdminAdmin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // number and password
+                string adminNumber = txtAdminAdminNumber.Text.Trim();
+                string adminPassword = txtAdminAdminPassword.Text.Trim();
+                // find the admins in the list
+                clsAdmin admin = myBank.vListAdmins.fncFind(adminNumber); // sent the event
+                if (admin == null || admin.vPassword != adminPassword)
+                {
+                    MessageBox.Show("ID or Password Incorect , Try Again !");
+                    txtAdminAdminPassword.Clear();
+                    txtAdminAdminPassword.Focus();
+                    txtAdminAdminNumber.Clear();
+                    txtAdminAdminNumber.Focus();
+                    return;
+                }
+                else
+                {
+                    lblAdminAdminName.Text = "Welcom  " + admin.vName;
+                    this.BackColor = Color.Silver;
+                    /// <summary>
+                    /// Function that size the tabControlBank to admin space by clicking in btnAdminAdmin
+                    /// </summary>
+                    fncSizeTabControlBankAdminSpace();
+                    // enlight the grup boxes in admin
+                    groupBoxAdminDirector.Enabled = groupBoxAdminAdmins.Enabled = groupBoxAdminAgencies.Enabled = groupBoxAdminEmployees.Enabled = true;
+                    groupBoxAdminClients.Enabled = groupBoxAdminAdviser.Enabled = groupBoxAdminPaidAccount.Enabled = groupBoxAdminUnPaidAccount.Enabled = true;
+                    pictureBoxAdminSpaceAdminAdmin.Image = System.Drawing.Image.FromFile(Application.StartupPath + @"/Admins/" + admin.vPhoto);
+                    // MessageBox.Show(admin.vNumber + admin.vPassword);
+                    
+                    // Start suscriber
+                    // Handler
+                    admin.ApplicationClosed += fncAdminHandler; // reference or pointer to this methode
+                    listBoxAdmin.Items.Add(admin.vName + "" + admin.vLastName);
+
+                    // Event : suscriber
+                    admin.OnApplicationClosed();
+                    // Timer
+                    lblTick_Tack.Visible = true;
+                    listBoxAdmin.Visible = true;
+                    CLock.Interval = interval; // milliseconds : 1s
+
+                    // Handler
+                    // System.Timers.Timer CLock = new System.Timers.Timer();
+                    CLock.Elapsed += OnTimeEvent; // System.Timers; // reference or pointer to this methode
+                    CLock.Start();
+                    // End suscriber
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        } // end btnAdminAdmin
+	}
+	
+	
 	
 ### Prerequisites
 
