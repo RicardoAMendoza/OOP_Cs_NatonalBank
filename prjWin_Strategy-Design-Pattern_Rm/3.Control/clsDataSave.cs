@@ -9,17 +9,17 @@ using System.Xml; // xml documents
 
 namespace prjWin_NationalBank_Rm
 {
+    /*
+       * This project uses the following licenses:
+       *  MIT License
+       *  Copyright (c) 2017 Ricardo Mendoza 
+       *  Montréal Québec Canada
+       *  Institut Teccart
+       *  www.teccart.qc.ca
+       *  Août 2017
+       */
     public static class clsDataSave
     {
-        /*
-        * This project uses the following licenses:
-        *  MIT License
-        *  Copyright (c) 2017 Ricardo Mendoza 
-        *  Montréal Québec Canada
-        *  Institut Teccart
-        *  www.teccart.qc.ca
-        *  Août 2017
-        */
         // Attributes
         public static clsListDirecteurs listDirectors = new clsListDirecteurs();
         public static clsListAdmins listAdmins = new clsListAdmins();

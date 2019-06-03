@@ -1,0 +1,10 @@
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\bin\Debug\prjWin_NationalBank_RmTests.dll
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\bin\Debug\prjWin_NationalBank_RmTests.pdb
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\bin\Debug\prjWin_Strategy-Design-Pattern_Rm.exe
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\bin\Debug\itextsharp.dll
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\bin\Debug\prjWin_Strategy-Design-Pattern_Rm.pdb
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\bin\Debug\itextsharp.xml
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\obj\Debug\prjWin_NationalBank_RmTests.csprojResolveAssemblyReference.cache
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\obj\Debug\prjWin_NationalBank_RmTests.dll
+D:\10.Portafolio\prjWin_NationalBank_Rm\prjWin_NationalBank_RmTests\obj\Debug\prjWin_NationalBank_RmTests.pdb

@@ -28,6 +28,13 @@ namespace prjWin_NationalBank_Rm
         /// </summary>
         public clsPaidAccount() : base()
         { }
+
+        /// <summary>
+        /// Constructor TEST.
+        /// </summary>
+        public clsPaidAccount(double vBalance, string vNumber, string vType) : base(vNumber, vType, vBalance)
+        { }
+
         /// <summary>
         /// Functions : Open Account
         /// </summary>
@@ -68,7 +75,7 @@ namespace prjWin_NationalBank_Rm
         /// </summary>
         /// <param name="withdrawal"></param>
         /// <returns></returns>
-        public override int fncWithdrawal(int withdrawal)
+        public override int fncWithdrawal(double withdrawal)
         {
             return base.fncWithdrawal(withdrawal);
         }
@@ -92,7 +99,7 @@ namespace prjWin_NationalBank_Rm
         {
             return deposit * vInterestRate;
         }
-        protected override double fncChargeComission(int withdrawal)
+        protected override double fncChargeComission(double withdrawal)
         {
             throw new NotImplementedException();
         }

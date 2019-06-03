@@ -52,7 +52,8 @@ namespace prjWin_NationalBank_Rm
             // MessageBox.Show("Photo string : " + tmp.Elements);
             myTxt.Close();
             return listDirectors;
-        }
+        } // end fncGetDirecteurs()
+
         /// <summary>
         /// Get agencies information from txt document
         /// </summary>
@@ -125,7 +126,8 @@ namespace prjWin_NationalBank_Rm
             myTxt.Close();
             //MessageBox.Show("Employees : " + tmp.Quantity.ToString());
             return listEmployees;
-        }
+        }// end fncGetEmployees()
+
         /// <summary>
         /// Get clients information from txt document
         /// </summary>
@@ -164,7 +166,7 @@ namespace prjWin_NationalBank_Rm
             //MessageBox.Show("Clients : " + tmp.Quantity.ToString());
             myTxt.Close();
             return listClients;
-        }
+        } // end fncGetClients
         /// <summary>
         /// Get paid accounts information from txt document
         /// </summary>

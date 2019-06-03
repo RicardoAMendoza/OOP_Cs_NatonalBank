@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Clients>
+<Clients/>
+
   <Client idCounter="2" number="C1C1" lastName="Gates" nip="windows" address="3540 Masson" adviserNumber="E1E1" adviserName="Juan" adviserLastName="Zamanego" hiringYear="2017" hiringMonth="8" hiringDay="15" photoAdviser="zamanego.png">
     <name>Bill</name>
   </Client>

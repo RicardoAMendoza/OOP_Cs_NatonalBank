@@ -419,8 +419,13 @@ namespace prjWin_NationalBank_Rm
                 /// </summary>
                 else if (radTransactionsWithdraw.Checked && actualUnpaidAccount.vType == lblTransactionsDisplayAccountType.Text)
                 {
-                    int montant = Convert.ToInt32(txtTransactionsWithdraw.Text.Trim());
-                    int result = actualUnpaidAccount.fncWithdrawal(montant);
+                    double amount = Convert.ToInt32(txtTransactionsWithdraw.Text.Trim());
+                    /// <summary>
+                    /// Functions : Withdrawal
+                    /// </summary>
+                    /// <param name="amount"></param>
+                    /// <returns>base.fncWithdrawl(amount);</returns>
+                    int result = actualUnpaidAccount.fncWithdrawal(amount);
                     switch (result)
                     {
                         case 1:
@@ -437,7 +442,7 @@ namespace prjWin_NationalBank_Rm
                             return;
                     }
                     lblInfo.Text = actualUnpaidAccount.fncPrintBalanceUnPaidAccount();//funcion q viene de la clsAcount
-                    MessageBox.Show(montant.ToString() + " $ has been withdrawen in the Unpaid Account !");
+                    MessageBox.Show(amount.ToString() + " $ has been withdrawen in the Unpaid Account !");
                     /// <summary>
                     /// Add actualUnpaidAccount object to actualClient.vListUnpaidAccounts.
                     /// </summary>
@@ -488,8 +493,8 @@ namespace prjWin_NationalBank_Rm
                 /// </summary>
                 else if (radTransactionsWithdraw.Checked && actualPaidAccount.vType == lblTransactionsDisplayAccountType.Text)
                 {
-                    int montant = Convert.ToInt32(txtTransactionsWithdraw.Text.Trim());
-                    int result = actualPaidAccount.fncWithdrawal(montant);
+                    int amount = Convert.ToInt32(txtTransactionsWithdraw.Text.Trim());
+                    int result = actualPaidAccount.fncWithdrawal(amount);
 
                     switch (result)
                     {
@@ -508,7 +513,7 @@ namespace prjWin_NationalBank_Rm
                     }
                     // 2.- Print info account
                     lblInfo.Text = actualPaidAccount.fncPrintBalancePaidAccount();// funcion q viene de la clase padre clsAcount
-                    MessageBox.Show(montant.ToString() + " $ has been withdrawen  in the Paid Accoun!");
+                    MessageBox.Show(amount.ToString() + " $ has been withdrawen  in the Paid Accoun!");
                     /// <summary>
                     /// Add actualPaidAccount object to actualClient.vListUnpaidAccounts.
                     /// </summary>

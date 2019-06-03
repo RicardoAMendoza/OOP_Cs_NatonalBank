@@ -22,11 +22,19 @@ namespace prjWin_NationalBank_Rm
         /// </summary>
         public clsUnpaidAccount(double vCommission, int vOverdraft, string vNumber, string vType, double vBalance, int vDay, int vMonth, int vYear) : base(vCommission, vOverdraft, vNumber, vType, vBalance, vDay, vMonth, vYear)
         { }
+
         /// <summary>
         /// Constructor that takes no arguments.
         /// </summary>
         public clsUnpaidAccount() : base()
         { }
+
+        /// <summary>
+        /// Constructor TEST.
+        /// </summary>
+        public clsUnpaidAccount(double vBalance, string vNumber, string vType) : base(vNumber, vType, vBalance)
+        { }
+
         /// <summary>
         /// Functions : Open Account
         /// </summary>
@@ -48,20 +56,20 @@ namespace prjWin_NationalBank_Rm
         /// <summary>
         /// Functions : Withdrawal
         /// </summary>
-        /// <param name="withdrawal"></param>
-        /// <returns>base.fncWithdrawl(withdrawal);</returns>
-        public override int fncWithdrawal(int withdrawal)
+        /// <param name="amount"></param>
+        /// <returns>base.fncWithdrawl(amount);</returns>
+        public override int fncWithdrawal(double amount)
         {
             /// <summary>
             /// Function override : Charge  commission
             /// <summary>
-            vCommissionCharge = fncChargeComission(withdrawal);
+            vCommissionCharge = fncChargeComission(amount);
             if (vCommissionCharge > 0)
             {
                 MessageBox.Show("a comission of : " + " " + vCommissionCharge.ToString() + " $ " + " has been charged ");
             }
             fncUnpaidAccountCommission(vCommissionCharge);
-            return base.fncWithdrawal(withdrawal);
+            return base.fncWithdrawal(amount);
         }
         /// <summary>
         /// 
@@ -80,11 +88,11 @@ namespace prjWin_NationalBank_Rm
         /// limite du découvert autorisé) a lieu la banque prélève sur le compte des frais de gestion
         /// de 12% sur le montant du dépassement
         /// </summary>
-        protected override double fncChargeComission(int withdrawal)
+        protected override double fncChargeComission(double amount)
         {
-            if ((vBalance - withdrawal) < vOverdraft)
+            if ((vBalance - amount) < vOverdraft)
             {
-                return (vOverdraft + withdrawal - vBalance) * vCommission;
+                return (vOverdraft + amount - vBalance) * vCommission;
             }
             else
             {
@@ -103,5 +111,14 @@ namespace prjWin_NationalBank_Rm
         {
             throw new NotImplementedException();
         }
+
+        // ATARTS TEXT
+
+        public void Test()
+        {
+            int r = Add(1, 2);
+        }
+
+        // ENDS TEXT
     }
 }

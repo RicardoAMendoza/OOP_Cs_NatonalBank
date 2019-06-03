@@ -93,6 +93,18 @@ namespace prjWin_NationalBank_Rm
             Balance = 0;
             OpenDate = new clsDate();
         }
+
+        /// <summary>
+        /// Constructor TEST.
+        /// </summary>
+        public clsAccount(string vNumber, string vType, double vBalance)
+        {
+            Number = vNumber;
+            Type = vType;
+            Balance = vBalance;
+        }
+
+
         /// <summary>
         /// Properties -> in the Function protected abstract : Charge  commission.
         /// </summary>
@@ -152,6 +164,18 @@ namespace prjWin_NationalBank_Rm
             get { return OpenDate; }
             set { OpenDate = value; }
         }
+
+        // STARTS TEST PARA EL EXAMEN
+
+
+         protected internal int Add(int x, int y)
+        {
+            return x + y;
+        }
+
+
+
+        // ENDS TEST PARA LE EXAMEN
         /// <summary>
         /// Function protected abstract : Charge  commission
         /// Un CompteNonRemunéré -> clsUnpaidAccount : clsAccount
@@ -161,7 +185,7 @@ namespace prjWin_NationalBank_Rm
         /// limite du découvert autorisé) a lieu la banque prélève sur le compte des frais de gestion
         /// de 12% sur le montant du dépassement
         /// </summary>
-        protected abstract double fncChargeComission(int withdrawal);
+        protected abstract double fncChargeComission(double amount);
         /// <summary>
         /// Functions : Pay interest
         /// Un CompteRemunéré:
@@ -204,17 +228,17 @@ namespace prjWin_NationalBank_Rm
         /// <summary>
         /// Functions : Withdrawal
         /// </summary>
-        /// <param name="withdrawal"></param>
+        /// <param name="amount"></param>
         /// <returns></returns>
-        public virtual int fncWithdrawal(int withdrawal)
+        public virtual int fncWithdrawal(double amount)
         {
-            if (withdrawal > 500) { return -2; }
-            if (withdrawal < 20) { return -1; }
-            if (withdrawal > vBalance) { return 1; }
-            if (withdrawal % 20 != 0) { return 2; }
+            if (amount > 500) { return -2; }
+            if (amount < 20) { return -1; }
+            if (amount > vBalance) { return 1; }
+            if (amount % 20 != 0) { return 2; }
             else
             {
-                vBalance -= withdrawal;
+                vBalance -= amount;
                 return 0;
             }
         }
